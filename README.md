@@ -1,6 +1,6 @@
 # Pure JavaScript filtering for any plain HTML table
 
-Super simple filtering without frameworks and complex components. Simply copy & paste.
+Super simple filtering without frameworks and complex components. Comes with Autocompletion. Simply copy & paste.
 
 It works, assuming you have the following structure of your table:
 
