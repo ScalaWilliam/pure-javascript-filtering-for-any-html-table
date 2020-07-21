@@ -5,8 +5,12 @@ Super simple filtering without frameworks and complex components. Comes with Aut
 It works, assuming you have the following structure of your table:
 
 ```html
-<table class="searchable">
+<table>
   <thead>
+    <tr>
+      <th>...</th>
+	    ...
+    </tr>
   </thead>
   <tbody>
     <tr>
