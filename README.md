@@ -18,6 +18,9 @@ It works, assuming you have the following structure of your table:
 
 
 # Demo!
+
+Experimented on https://riptutorial.com/html/example/8562/table-with-thead--tbody--tfoot--and-caption
+
 ![filterjs](https://user-images.githubusercontent.com/2464813/88112283-7324f400-cba7-11ea-9de4-b9745e5e7407.gif)
 
 # The code
