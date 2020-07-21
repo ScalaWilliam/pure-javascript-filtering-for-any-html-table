@@ -5,7 +5,7 @@ Super simple filtering without frameworks and complex components. Simply copy & 
 It works, assuming you have the following structure of your table:
 
 ```html
-<table>
+<table class="searchable">
   <thead>
   </thead>
   <tbody>
@@ -19,7 +19,8 @@ It works, assuming you have the following structure of your table:
 
 ```javascript
 
-Array.from(document.querySelectorAll('table.sortable')).forEach((table) => {
+function addSearchFilters(tables) {
+Array.from(tables).forEach((table) => {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -51,6 +52,7 @@ function getRandomInt(max) {
 	})
 	thead.insertBefore(filtering, thead.firstChild);
 });
+}
 
 function searchBoxChange(theInput, colIdx) {
 	const tbl = theInput.closest('table');
@@ -70,4 +72,7 @@ function searchBoxChange(theInput, colIdx) {
 		else deselectRow(row);
 	})
 }
+
+// you can add this to wherever you need in your lifecycle
+addSearchFilters(document.querySelectorAll('table.searchable'));
 ```
