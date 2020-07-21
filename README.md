@@ -18,13 +18,15 @@ It works, assuming you have the following structure of your table:
 
 
 ```javascript
-
 function addSearchFilters(tables) {
 Array.from(tables).forEach((table) => {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 	const thead = table.querySelector('thead');
+	if ( !thead ) return;
+	const tbody = table.querySelector('tbody');
+	if ( !tbody) return;
 	const headings = Array.from(thead.querySelectorAll('th')).map((th) => (th.innerText.trim()));
 	const filtering = document.createElement('tr');
 
@@ -72,7 +74,8 @@ function searchBoxChange(theInput, colIdx) {
 		else deselectRow(row);
 	})
 }
-
+// if you want to only mark this for specific tables
+// addSearchFilters(document.querySelectorAll('table.searchable'));
 // you can add this to wherever you need in your lifecycle
-addSearchFilters(document.querySelectorAll('table.searchable'));
+addSearchFilters(document.querySelectorAll('table'));
 ```
